@@ -57,7 +57,7 @@ defmodule Scrivener.HTML do
         "?page=4"
     """
     def path(_conn, _action, opts \\ []) do
-      "?" <> Plug.Conn.Query.encode(opts)
+      "?" <> URI.encode_query(opts)
     end
   end
 
